@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = require('./routes');
+const cors = require('cors');
 
 const mongoose = require('mongoose');
 
@@ -9,6 +10,8 @@ mongoose.connect('mongodb+srv://aircnc:aircnc@cluster0-823rr.mongodb.net/aircnc?
    useNewUrlParser: true,
    useUnifiedTopology: true
 });
+
+app.use(cors());
 
 app.use(express.json());
 
