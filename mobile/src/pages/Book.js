@@ -1,8 +1,16 @@
-import React from 'react';
-import {View} from 'react-native';
+import React, {useEffect} from 'react';
+import {View, Text} from 'react-native';
 
-export default function Book(){
+export default function Book({navigation}){
+   const id = navigation.getParam(id);
+
+   useEffect(() => {
+      console.log(id);
+   }, [])
+   
    return (
-      <View />
+      <View>
+         <Text>{id}</Text>
+      </View>
    )
 }
