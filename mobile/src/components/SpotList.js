@@ -32,7 +32,7 @@ function SpotList({tech, navigation}){
             keyExtractor={spot => spot._id}
             horizontal
             showsHorizontalScrollIndicator={false}
-            renderItem={(item) => (
+            renderItem={({item}) => (
                <View style={styles.listItem} >
                   <Image style={styles.thumbnail} source={{uri: item.thumbnail_url}} />
                   <Text style={styles.company}>{item.company}</Text>
