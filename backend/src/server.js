@@ -7,10 +7,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://aircnc:aircnc@cluster0-823rr.mongodb.net/aircnc?retryWrites=true&w=majority', {
-   useNewUrlParser: true,
-   useUnifiedTopology: true
-});
+//colocar conexão de banco aqui
 
 app.use(cors());
 
